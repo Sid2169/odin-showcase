@@ -172,15 +172,141 @@ main {
 
 .hero__media {
   flex: 0 0 auto;
+  perspective: 1200px;
+}
+
+.avatar-flip {
+  width: 224px;
+  height: 224px;
+  margin: 0 auto;
+}
+
+.avatar-flip__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  cursor: pointer;
+}
+
+.avatar-flip:hover .avatar-flip__inner,
+.avatar-flip:focus-visible .avatar-flip__inner {
+  transform: rotateY(180deg);
+}
+
+.avatar-flip__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.avatar-flip__face--back {
+  transform: rotateY(180deg);
 }
 
 .hero__avatar {
-  width: 224px;
-  height: 224px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow-lg);
   border: 6px solid var(--surface);
+}
+
+.hero__caption {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 24px;
+  animation: modal-fade 0.2s ease;
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal__content {
+  position: relative;
+  margin: 0;
+  max-width: min(720px, 90vw);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-lg);
+  animation: modal-pop 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+@keyframes modal-pop {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal__image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.modal__caption {
+  text-align: center;
+  margin: 14px 0 2px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.modal__close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal__close:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
 }
 
 /* Projects */
