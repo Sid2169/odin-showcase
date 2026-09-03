@@ -1,6 +1,13 @@
 import { SITE, ASSETS } from '../constants';
+import type { ThemePreference } from '../hooks/useTheme';
+import ThemeToggle from './ThemeToggle';
 
-function Header() {
+interface HeaderProps {
+  preference: ThemePreference;
+  onThemeSelect: (pref: ThemePreference) => void;
+}
+
+function Header({ preference, onThemeSelect }: HeaderProps) {
   return (
     <header className="header">
       <div className="header__inner">
@@ -14,6 +21,7 @@ function Header() {
           <a href={SITE.GITHUB_URL} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
+          <ThemeToggle preference={preference} onSelect={onThemeSelect} />
         </nav>
       </div>
     </header>

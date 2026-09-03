@@ -3,25 +3,50 @@
   --text-h: #1e1b2e;
   --text-muted: #6b7280;
   --bg: #faf9fb;
+  --bg-grad: linear-gradient(180deg, #fbfafc 0%, #f4f1f7 100%);
   --surface: #ffffff;
   --border: #e5e4e9;
   --accent: #cc6600;
   --accent-dark: #a05200;
-  --accent-bg: rgba(204, 102, 0, 0.08);
+  --accent-bg: rgba(204, 102, 0, 0.09);
+  --accent-contrast: #ffffff;
   --shadow:
     rgba(0, 0, 0, 0.08) 0 10px 25px -5px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+  --shadow-lg:
+    rgba(0, 0, 0, 0.12) 0 20px 40px -12px, rgba(0, 0, 0, 0.06) 0 8px 12px -6px;
+
+  color-scheme: light;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   font: 17px/1.6 var(--sans);
-  color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  --text: #c9c4d4;
+  --text-h: #f2f0f7;
+  --text-muted: #8f8aa0;
+  --bg: #17161d;
+  --bg-grad: linear-gradient(180deg, #1a1922 0%, #131219 100%);
+  --surface: #211f2a;
+  --border: #32303f;
+  --accent: #ff9d4d;
+  --accent-dark: #ffb877;
+  --accent-bg: rgba(255, 157, 77, 0.12);
+  --accent-contrast: #1a150f;
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 25px -5px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+  --shadow-lg:
+    rgba(0, 0, 0, 0.5) 0 20px 40px -12px, rgba(0, 0, 0, 0.35) 0 8px 12px -6px;
+
+  color-scheme: dark;
 }
 
 * {
@@ -48,6 +73,7 @@ h3 {
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
