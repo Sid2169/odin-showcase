@@ -11,7 +11,12 @@ function Header({ preference, onThemeSelect }: HeaderProps) {
   return (
     <header className="header">
       <div className="header__inner">
-        <a href="#top" className="header__logo">
+        <a
+          href={SITE.ODIN_URL}
+          className="header__logo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={ASSETS.LOGO} alt={`${SITE.TITLE} logo`} className="header__logo-img" />
           <span>{SITE.TITLE}</span>
         </a>
