@@ -1,0 +1,60 @@
+:root {
+  --text: #3d3a4a;
+  --text-h: #1e1b2e;
+  --text-muted: #6b7280;
+  --bg: #faf9fb;
+  --surface: #ffffff;
+  --border: #e5e4e9;
+  --accent: #cc6600;
+  --accent-dark: #a05200;
+  --accent-bg: rgba(204, 102, 0, 0.08);
+  --shadow:
+    rgba(0, 0, 0, 0.08) 0 10px 25px -5px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  font: 17px/1.6 var(--sans);
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  color: var(--text-h);
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
