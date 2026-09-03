@@ -17,6 +17,7 @@ Run the dev server and open the printed local URL.
 - `npm run build` – type-check and build for production
 - `npm run preview` – preview the production build locally
 - `npm run lint` – run the linter
+- `npm run deploy` – build and push `dist` to the `gh-pages` branch
 
 ## Assets
 
@@ -32,9 +33,15 @@ The exact paths are defined as invariants in `src/constants.ts` and referenced t
 
 ## Deployment
 
-The site is configured to deploy to GitHub Pages via the workflow in
-`.github/workflows/deploy.yml`. Pushing to `main` triggers a build and deploy.
-The live site is served at:
+The site is deployed to GitHub Pages from a `gh-pages` branch that contains
+the production build output (the `dist` folder). Run:
+
+```bash
+npm run deploy
+```
+
+This runs the build (`npm run build`) and pushes `dist` to the `gh-pages`
+branch, which GitHub Pages serves. The live site is served at:
 
 ```
 https://Sid2169.github.io/odin-showcase/
