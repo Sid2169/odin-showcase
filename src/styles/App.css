@@ -380,8 +380,16 @@ main {
 .project-card__meta {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.project-card__date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .project-card__module {
@@ -398,6 +406,7 @@ main {
 .project-card__title {
   font-size: 20px;
   letter-spacing: -0.2px;
+  margin-bottom: 8px;
 }
 
 .project-card__title a {

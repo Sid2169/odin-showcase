@@ -18,12 +18,13 @@ function ProjectCard({ project }: ProjectCardProps) {
       <div className="project-card__body">
         <div className="project-card__meta">
           <span className="project-card__module">{project.odinModule}</span>
-          <h3 className="project-card__title">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              {project.title}
-            </a>
-          </h3>
+          <span className="project-card__date">{project.publishedDate}</span>
         </div>
+        <h3 className="project-card__title">
+          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+            {project.title}
+          </a>
+        </h3>
         <p className="project-card__description">{project.description}</p>
         <ul className="project-card__tags">
           {project.tags.map((tag) => (

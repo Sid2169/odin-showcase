@@ -26,6 +26,7 @@ export interface Project {
   repoUrl: string;
   tags: string[];
   odinModule: string;
+  publishedDate: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -38,6 +39,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/battleship',
     tags: ['HTML', 'CSS', 'JavaScript', 'webpack'],
     odinModule: 'Javascript',
+    publishedDate: '10 May 2026',
   },
   {
     id: 'calculator',
@@ -48,6 +50,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/Calc',
     tags: ['HTML', 'CSS','JavaScript'],
     odinModule: 'JavaScript',
+    publishedDate: '31 January 2025',
   },
   {
     id: 'sketch',
@@ -58,6 +61,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/sketch',
     tags: ['HTML', 'CSS', 'JavaScript'],
     odinModule: 'Javascript',
+    publishedDate: '24 January 2025',
   },
   {
     id: 'todo',
@@ -68,6 +72,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/Capiche',
     tags: ['JavaScript', 'Webpack'],
     odinModule: 'JavaScript',
+    publishedDate: '29 November 2025',
   },
   {
     id: 'aero',
@@ -78,6 +83,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/aero/',
     tags: ['JavaScript', 'Webpack', 'Tailwind CSS'],
     odinModule: 'JavaScript',
+    publishedDate: '10 December 2025',
   },
   {
     id: 'tic-tac',
@@ -88,6 +94,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/TicTac',
     tags: ['HTML', 'CSS', 'JavaScript'],
     odinModule: 'Javascript',
+    publishedDate: '15 March 2025',
   },
   {
     id: 'trade',
@@ -98,6 +105,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/trade-analyze',
     tags: ['TypeScript', 'React', 'Vite'],
     odinModule: 'Javascript',
+    publishedDate: '23 March 2026',
   },
   {
     id: 'threeway',
@@ -108,6 +116,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/threeWay',
     tags: ['HTML', 'CSS', 'JavaScript'],
     odinModule: 'Foundations',
+    publishedDate: '1 December 2024',
   },
   {
     id: 'landing',
@@ -118,6 +127,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/Landing',
     tags: ['HTML', 'CSS'],
     odinModule: 'Fundamental',
+    publishedDate: '9 October 2024',
   },
   {
     id: 'library',
@@ -128,6 +138,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/BookLib',
     tags: ['HTML', 'CSS','JavaScript'],
     odinModule: 'JavaScript',
+    publishedDate: '11 March 2025',
   },
   {
     id: 'recipe',
@@ -138,6 +149,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/odin_recepies',
     tags: ['HTML', 'CSS'],
     odinModule: 'JavaScript',
+    publishedDate: '21 September 2023',
   },
   {
     id: 'resturant',
@@ -148,6 +160,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/Restaurant',
     tags: ['HTML', 'CSS','JavaScript'],
     odinModule: 'JavaScript',
+    publishedDate: '18 August 2025',
   },
    {
     id: 'portfolio',
@@ -158,5 +171,6 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/Sid2169/portfolio',
     tags: ['React', 'Tailwind', 'Three.Js', 'Gsap'],
     odinModule: 'Getting Hired',
+    publishedDate: '24 December 2025',
   },
 ];
