@@ -714,13 +714,26 @@ main {
 .marquee__item {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.marquee__icon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.marquee__item:hover .marquee__icon {
+  color: var(--accent);
+  opacity: 1;
 }
 
 .marquee__star {

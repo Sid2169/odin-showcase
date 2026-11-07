@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { PROJECTS } from '../constants';
+import TechIcon from './TechIcon';
 
 function TechMarquee() {
   const tags = useMemo(() => {
@@ -30,6 +31,7 @@ function TechMarquee() {
                 <span className="marquee__star" aria-hidden="true">
                   ✦
                 </span>
+                <TechIcon tag={tag} className="marquee__icon" />
                 {tag}
               </span>
             ))}
