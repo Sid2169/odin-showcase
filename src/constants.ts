@@ -15,6 +15,12 @@ export const SITE = {
   ROLE: 'Full Stack Web Engineer',
   GITHUB_URL: 'https://github.com/Sid2169',
   ODIN_URL: 'https://www.theodinproject.com',
+  ODIN_PATHS: {
+    FOUNDATIONS: 'https://www.theodinproject.com/paths/foundations/courses/foundations',
+    FULL_STACK: 'https://www.theodinproject.com/paths/full-stack-javascript',
+    GETTING_HIRED:
+      'https://www.theodinproject.com/paths/full-stack-javascript/courses/getting-hired',
+  },
 } as const;
 
 export interface Project {
@@ -27,6 +33,52 @@ export interface Project {
   tags: string[];
   odinModule: string;
   publishedDate: string;
+}
+
+export interface ModuleTrack {
+  id: string;
+  label: string;
+  description: string;
+  matches: readonly string[];
+}
+
+export const MODULE_TRACKS: readonly ModuleTrack[] = [
+  {
+    id: 'foundations',
+    label: 'Foundations',
+    description: 'HTML, CSS and the box model — where every first page begins.',
+    matches: ['foundations', 'fundamental'],
+  },
+  {
+    id: 'javascript',
+    label: 'Full Stack JavaScript',
+    description: 'DOM, async, OOP, bundlers, APIs and browser games.',
+    matches: ['javascript'],
+  },
+  {
+    id: 'learning-platform',
+    label: 'Learning Platform',
+    description: 'A self-study Python and applied-AI course, built beyond the curriculum.',
+    matches: ['learning platform'],
+  },
+  {
+    id: 'getting-hired',
+    label: 'Getting Hired',
+    description: 'Portfolio, presentation and the final career push.',
+    matches: ['getting hired'],
+  },
+];
+
+export function getTrack(moduleName: string): ModuleTrack | undefined {
+  const normalized = moduleName.trim().toLowerCase();
+  return MODULE_TRACKS.find((track) =>
+    track.matches.some((match) => normalized === match || normalized.startsWith(match)),
+  );
+}
+
+export function getProjectYear(project: Project): number {
+  const match = project.publishedDate.match(/\d{4}/);
+  return match ? Number(match[0]) : new Date(project.publishedDate).getFullYear();
 }
 
 export const PROJECTS: Project[] = [

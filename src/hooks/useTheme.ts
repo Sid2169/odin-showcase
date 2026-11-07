@@ -36,6 +36,8 @@ export function useTheme() {
     const root = document.documentElement;
     root.classList.toggle('dark', resolvedTheme === 'dark');
     root.classList.toggle('light', resolvedTheme === 'light');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    themeColor?.setAttribute('content', resolvedTheme === 'dark' ? '#0a0a0b' : '#f6f4ef');
   }, [resolvedTheme]);
 
   const setTheme = useCallback((next: ThemePreference) => {
