@@ -82,7 +82,7 @@ export function getProjectYear(project: Project): number {
 }
 
 export const PROJECTS: Project[] = [
-{
+  {
     id: 'ml-python',
     title: 'MLPy— Python for Applied AI and Backend Engineering',
     description: 'A self-study course for experienced TypeScript/Node.js developers who want practical Python fluency for building AI services, data pipelines, ML experiments, and production backend integrations.',
@@ -92,6 +92,18 @@ export const PROJECTS: Project[] = [
     tags: ['React','TypeScript','Next', 'Tailwind', ],
     odinModule: 'Learning Platform',
     publishedDate: 'November 2026',
+  },
+  {
+    id: 'pg-life',
+    title: 'PG Life',
+    description:
+      'PG Life is a PG (paying guest) accommodation search web app for students and working professionals: browse PG listings in a city, filter them by gender, budget and rent, view photos, amenities and ratings, and shortlist the ones you like.',
+    image: `${ASSETS.PROJECTS}/pg-life.webp`,
+    liveUrl: 'https://pglife-production-a9c9.up.railway.app/',
+    repoUrl: 'https://github.com/Sid2169/PGLife',
+    tags: ['React', 'MySQL', 'Bootstrap'],
+    odinModule: 'JavaScript',
+    publishedDate: '15 September 2026',
   },
   {
     id: 'battle-ship',
