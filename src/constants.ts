@@ -94,18 +94,6 @@ export const PROJECTS: Project[] = [
     publishedDate: 'November 2026',
   },
   {
-    id: 'pg-life',
-    title: 'PG Life',
-    description:
-      'PG Life is a PG (paying guest) accommodation search web app for students and working professionals: browse PG listings in a city, filter them by gender, budget and rent, view photos, amenities and ratings, and shortlist the ones you like.',
-    image: `${ASSETS.PROJECTS}/pg-life.webp`,
-    liveUrl: 'https://pglife-production-a9c9.up.railway.app/',
-    repoUrl: 'https://github.com/Sid2169/PGLife',
-    tags: ['React', 'MySQL', 'Bootstrap'],
-    odinModule: 'JavaScript',
-    publishedDate: '15 September 2026',
-  },
-  {
     id: 'battle-ship',
     title: 'Battle Ship',
     description: 'A classic Battleship duel against a smart computer opponent, built as a fast, dependency-light browser game with custom ship sprites, sound effects, and background music.',
@@ -137,6 +125,18 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Tailwind', 'Three.Js', 'Gsap'],
     odinModule: 'Getting Hired',
     publishedDate: '24 December 2025',
+  },
+  {
+    id: 'pg-life',
+    title: 'PG Life',
+    description:
+      'PG Life is a PG (paying guest) accommodation search web app for students and working professionals: browse PG listings in a city, filter them by gender, budget and rent, view photos, amenities and ratings, and shortlist the ones you like.',
+    image: `${ASSETS.PROJECTS}/pg-life.webp`,
+    liveUrl: 'https://pglife-production-a9c9.up.railway.app/',
+    repoUrl: 'https://github.com/Sid2169/PGLife',
+    tags: ['React', 'MySQL', 'Bootstrap'],
+    odinModule: 'JavaScript',
+    publishedDate: '18 December 2025',
   },
   {
     id: 'aero',
