@@ -1,26 +1,36 @@
 :root {
-  --text: #3d3a4a;
-  --text-h: #1e1b2e;
-  --text-muted: #6b7280;
-  --bg: #faf9fb;
-  --bg-grad: linear-gradient(180deg, #fbfafc 0%, #f4f1f7 100%);
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --bg: #f6f4ef;
+  --bg-elevated: #fbfaf7;
+  --bg-grid: rgba(28, 24, 19, 0.055);
   --surface: #ffffff;
-  --border: #e5e4e9;
-  --accent: #cc6600;
-  --accent-dark: #a05200;
-  --accent-bg: rgba(204, 102, 0, 0.09);
-  --accent-contrast: #ffffff;
+  --panel: #edeae3;
+  --text: #45413a;
+  --text-h: #171512;
+  --text-muted: #6d675d;
+  --text-faint: #776f63;
+  --border: #e3ded4;
+  --border-strong: #cec7ba;
+  --accent: #d95d1a;
+  --accent-strong: #b94a10;
+  --accent-soft: rgba(217, 93, 26, 0.09);
+  --accent-contrast: #fffaf5;
+  --code-bg: #141210;
+  --code-text: #e9e4db;
+  --code-muted: #8b8478;
   --shadow:
-    rgba(0, 0, 0, 0.08) 0 10px 25px -5px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+    0 1px 2px rgba(24, 22, 19, 0.05),
+    0 16px 40px -24px rgba(24, 22, 19, 0.28);
   --shadow-lg:
-    rgba(0, 0, 0, 0.12) 0 20px 40px -12px, rgba(0, 0, 0, 0.06) 0 8px 12px -6px;
+    0 2px 4px rgba(24, 22, 19, 0.05),
+    0 32px 80px -40px rgba(24, 22, 19, 0.4);
 
   color-scheme: light;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
-
-  font: 17px/1.6 var(--sans);
+  font: 16.5px/1.65 var(--font-sans);
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -30,21 +40,30 @@
 }
 
 :root.dark {
-  --text: #c9c4d4;
-  --text-h: #f2f0f7;
-  --text-muted: #8f8aa0;
-  --bg: #17161d;
-  --bg-grad: linear-gradient(180deg, #1a1922 0%, #131219 100%);
-  --surface: #211f2a;
-  --border: #32303f;
-  --accent: #ff9d4d;
-  --accent-dark: #ffb877;
-  --accent-bg: rgba(255, 157, 77, 0.12);
-  --accent-contrast: #1a150f;
+  --bg: #0a0a0b;
+  --bg-elevated: #101012;
+  --bg-grid: rgba(255, 255, 255, 0.05);
+  --surface: #111113;
+  --panel: #1a1a1e;
+  --text: #bdb8af;
+  --text-h: #f5f2eb;
+  --text-muted: #9a9488;
+  --text-faint: #837c70;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.17);
+  --accent: #ff6b2c;
+  --accent-strong: #ff8b56;
+  --accent-soft: rgba(255, 107, 44, 0.12);
+  --accent-contrast: #190d05;
+  --code-bg: #060607;
+  --code-text: #ddd8cf;
+  --code-muted: #827b6f;
   --shadow:
-    rgba(0, 0, 0, 0.4) 0 10px 25px -5px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+    0 1px 0 rgba(255, 255, 255, 0.03) inset,
+    0 24px 50px -30px rgba(0, 0, 0, 0.9);
   --shadow-lg:
-    rgba(0, 0, 0, 0.5) 0 20px 40px -12px, rgba(0, 0, 0, 0.35) 0 8px 12px -6px;
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 40px 100px -50px rgba(0, 0, 0, 1);
 
   color-scheme: dark;
 }
@@ -55,32 +74,100 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 h1,
 h2,
-h3 {
-  font-family: var(--sans);
+h3,
+h4 {
+  font-family: var(--font-display);
   color: var(--text-h);
-  line-height: 1.2;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
   margin: 0;
 }
 
 a {
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent-dark);
+  color: var(--accent-strong);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+button {
+  font: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 14px;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  color: var(--accent-contrast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

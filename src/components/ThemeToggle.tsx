@@ -13,16 +13,14 @@ const OPTIONS: { value: ThemePreference; label: string }[] = [
 
 function ThemeToggle({ preference, onSelect }: ThemeToggleProps) {
   return (
-    <div
-      className="theme-toggle"
-      role="group"
-      aria-label="Color theme"
-    >
+    <div className="theme-toggle" role="group" aria-label="Color theme">
       {OPTIONS.map((option) => (
         <button
           key={option.value}
           type="button"
-          className={`theme-toggle__button${preference === option.value ? ' theme-toggle__button--active' : ''}`}
+          className={`theme-toggle__button${
+            preference === option.value ? ' theme-toggle__button--active' : ''
+          }`}
           aria-pressed={preference === option.value}
           onClick={() => onSelect(option.value)}
         >
