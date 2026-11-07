@@ -4,7 +4,7 @@ A showcase of projects built while following [The Odin Project](https://www.theo
 
 **Live site:** https://Sid2169.github.io/odin-showcase/
 
-**Developer:** [Siddhartha Singh](https://sidsingh.vercel.app/)
+**Developer:** [Siddhartha Suman](https://sidsingh.vercel.app/)
 
 ![screenshot](screenshot.png)
 
