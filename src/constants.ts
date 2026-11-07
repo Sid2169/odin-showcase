@@ -13,6 +13,7 @@ export const SITE = {
   DESCRIPTION: 'A showcase of projects built while following The Odin Project curriculum',
   AUTHOR: 'Siddhartha',
   ROLE: 'Full Stack Web Engineer',
+  PORTFOLIO_URL: 'https://sidsingh.vercel.app/',
   GITHUB_URL: 'https://github.com/Sid2169',
   ODIN_URL: 'https://www.theodinproject.com',
   ODIN_PATHS: {

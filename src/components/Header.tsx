@@ -62,6 +62,14 @@ function Header({ preference, onThemeSelect }: HeaderProps) {
             About
           </a>
           <a
+            href={SITE.PORTFOLIO_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={closeMenu}
+          >
+            Developer <span className="nav__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
             href={SITE.GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
