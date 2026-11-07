@@ -31,6 +31,17 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    id: 'ml-python',
+    title: 'MLPy— Python for Applied AI and Backend Engineering',
+    description: 'A self-study course for experienced TypeScript/Node.js developers who want practical Python fluency for building AI services, data pipelines, ML experiments, and production backend integrations.',
+    image: `${ASSETS.PROJECTS}/ml-py.png`,
+    liveUrl: 'https://sid2169.github.io/battleship/',
+    repoUrl: 'https://github.com/Sid2169/battleship',
+    tags: ['React','TypeScript','Next', 'Tailwind', ],
+    odinModule: 'Learning Platform',
+    publishedDate: 'November 2026',
+  },
+  {
     id: 'battle-ship',
     title: 'Battle Ship',
     description: 'A classic Battleship duel against a smart computer opponent, built as a fast, dependency-light browser game with custom ship sprites, sound effects, and background music.',
