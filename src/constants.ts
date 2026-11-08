@@ -168,6 +168,17 @@ export const PROJECTS: Project[] = [
     publishedDate: '29 November 2025',
   },
   {
+    id: 'memory-card',
+    title: 'Memory Card — Picture Memory Game',
+    description: 'A responsive memory game featuring 13 illustrated cards, three difficulty levels, and saved personal best scores. Pick each picture only once as the cards shuffle after every selection, with full keyboard support and an accessible dark interface.',
+    image: `${ASSETS.PROJECTS}/memory-card.png`,
+    liveUrl: 'https://sid2169.github.io/memory-card/',
+    repoUrl: 'https://github.com/Sid2169/memory-card',
+    tags: ['React', 'JavaScript', 'Vite', 'CSS'],
+    odinModule: 'React',
+    publishedDate: '4 November 2025',
+  },
+  {
     id: 'resume-builder',
     title: 'Resume Builder',
     description: 'An ATS-friendly resume builder with a solid-color dark interface, live A4 preview, and one-click PDF export. Includes editors for contact details, summary, experience, education, skills, and projects, with browser autosave, sample resume data, and responsive mobile editing.',
