@@ -57,6 +57,12 @@ export const MODULE_TRACKS: readonly ModuleTrack[] = [
     matches: ['javascript'],
   },
   {
+    id: 'react',
+    label: 'React',
+    description: 'Component-driven interfaces, state management and interactive applications.',
+    matches: ['react'],
+  },
+  {
     id: 'learning-platform',
     label: 'Learning Platform',
     description: 'A self-study Python and applied-AI course, built beyond the curriculum.',
@@ -160,6 +166,17 @@ export const PROJECTS: Project[] = [
     tags: ['JavaScript', 'Webpack'],
     odinModule: 'JavaScript',
     publishedDate: '29 November 2025',
+  },
+  {
+    id: 'resume-builder',
+    title: 'Resume Builder',
+    description: 'An ATS-friendly resume builder with a solid-color dark interface, live A4 preview, and one-click PDF export. Includes editors for contact details, summary, experience, education, skills, and projects, with browser autosave, sample resume data, and responsive mobile editing.',
+    image: `${ASSETS.PROJECTS}/resume-builder.png`,
+    liveUrl: 'https://sid2169.github.io/resume-builder/',
+    repoUrl: 'https://github.com/Sid2169/resume-builder',
+    tags: ['JavaScript', 'React', 'Vite', 'CSS', 'React PDF'],
+    odinModule: 'React',
+    publishedDate: '27 October 2025',
   },
   {
     id: 'resturant',
